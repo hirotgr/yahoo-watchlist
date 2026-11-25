@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yahoo Finance Watchlist Settings</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="settings">
+      <h1>Yahoo Finance Watchlist Settings</h1>
+      <p class="intro">Set the URL and size for the next time you open the dedicated window.</p>
+
+      <form id="settings-form" novalidate>
+        <label class="field" for="watchlist-url">
+          <span>Watchlist URL</span>
+          <input
+            id="watchlist-url"
+            name="watchlistUrl"
+            type="url"
+            autocomplete="url"
+            spellcheck="false"
+            required
+          >
+          <small>Enter a page on finance.yahoo.com under /watchlists or /watchlist/.</small>
+        </label>
+
+        <div class="dimensions">
+          <label class="field" for="window-width">
+            <span>Window width (px)</span>
+            <input id="window-width" name="windowWidth" type="number" min="240" max="1600" step="1" required>
+            <small>Enter an integer from 240 to 1600.</small>
+          </label>
+
+          <label class="field" for="window-height">
+            <span>Window height (px)</span>
+            <input id="window-height" name="windowHeight" type="number" min="400" max="1400" step="1" required>
+            <small>Enter an integer from 400 to 1400.</small>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button type="submit">Save settings</button>
+          <button id="restore-defaults" class="secondary" type="button">Restore defaults</button>
+        </div>
+        <p id="save-status" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </main>
+    <script src="config.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

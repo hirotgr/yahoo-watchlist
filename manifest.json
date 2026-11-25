@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Yahoo Finance Watchlist",
+  "version": "1.0.0",
+  "description": "Display the Yahoo Finance Watchlist Dock in a dedicated window.",
+  "permissions": [
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://finance.yahoo.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_title": "Yahoo Finance Watchlist を開く"
+  }
+}
